@@ -172,6 +172,10 @@ export const getMnemonicRecoveryEnabled = (state: RootState) =>
 export const getIsStakingEnabled = (state: RootState) =>
   getWebOptions(state).map(path(['featureFlags', 'isStakingEnabled']))
 
+// Super app link out feature flag
+export const getIsSuperAppEnabled = (state: RootState) =>
+  getWebOptions(state).map(path(['featureFlags', 'isSuperAppEnabled']))
+
 // crates nabu user at login if credentials aren't in metadata
 export const createNabuUserAtLogin = (state: RootState) =>
   getWebOptions(state).map(path(['featureFlags', 'createNabuUserAtLogin']))
@@ -231,7 +235,7 @@ export const getImportedAddressSweep = (state: RootState) =>
 // prove
 export const getProveEnabled = (state: RootState) =>
   getWebOptions(state).map(path(['featureFlags', 'proveEnabled']))
-  
+
 export const getFiatEntityRemediationAlert = (state: RootState) =>
   getWebOptions(state).map(path(['featureFlags', 'showFiatEntityRemediationAlert']))
 // sofi

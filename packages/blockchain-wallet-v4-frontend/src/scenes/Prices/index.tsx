@@ -61,10 +61,10 @@ const Scene = ({ children }) => {
                 <Text color='grey600' size='14px' weight={500}>
                   Real-time data is obtained from multiple sources and may sometimes be delayed due
                   to system performance issues. Past performance is not a reliable indicator of
-                  future results. Find out more about Staking and Rewards as well as the risks{' '}
+                  future results. Find out more about various crypto assets and their risks{' '}
                   <Link
                     size='14px'
-                    href='https://support.blockchain.com/hc/en-us/articles/10857163796380-Staking-and-Rewards-what-are-the-risks'
+                    href='https://support.blockchain.com/hc/en-us/articles/10857167024156-Various-Cryptoassets-and-Their-Risks'
                     target='_blank'
                     style={{ textDecoration: 'underline' }}
                   >
@@ -148,6 +148,7 @@ export type TableColumnsType = {
   buySellActions: ReturnType<typeof mapDispatchToProps>['buySellActions']
   formActions: ReturnType<typeof mapDispatchToProps>['formActions']
   isCoinViewV2Enabled: boolean
+  isUkUser: boolean
   modalActions: ReturnType<typeof mapDispatchToProps>['modalActions']
   routerActions: ReturnType<typeof mapDispatchToProps>['routerActions']
   swapActions: ReturnType<typeof mapDispatchToProps>['swapActions']

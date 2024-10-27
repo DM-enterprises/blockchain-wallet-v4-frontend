@@ -110,6 +110,7 @@ export const Icon: FunctionComponent<{
   onClick?: () => void
   role?: 'button'
 }>
+export const ActiveRewardsIcon: FunctionComponent<{ coin: string }>
 export const CoinAccountIcon: FunctionComponent<{
   accountType: 'CUSTODIAL' | 'EXCHANGE' | 'INTEREST' | 'STAKING' | 'ACCOUNT' | 'ACTIVE'
   coin: AllCoinsType

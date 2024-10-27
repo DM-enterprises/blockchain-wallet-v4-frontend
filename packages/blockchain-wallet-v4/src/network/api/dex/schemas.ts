@@ -21,7 +21,7 @@ import type {
 // TODO: Move somewhere to utils
 const stringToPositiveFloat = z.preprocess(
   (v) => parseFloat(z.string().parse(v)),
-  z.number().positive()
+  z.number().nonnegative()
 )
 
 export const listSchema = <T>(
@@ -72,6 +72,7 @@ const DexBcdcFeeSchema: z.ZodSchema<DexBcdcFee, z.ZodTypeDef, unknown> = z.objec
 
 const DexQuoteSchema: z.ZodSchema<DexQuote, z.ZodTypeDef, unknown> = z.object({
   bcdcFee: DexBcdcFeeSchema,
+  bcdcFeePercentage: stringToPositiveFloat,
   buyAmount: DexBuyAmountSchema,
   buyTokenFee: stringToPositiveFloat,
   price: stringToPositiveFloat,
